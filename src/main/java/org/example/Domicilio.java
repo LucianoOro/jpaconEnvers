@@ -1,6 +1,7 @@
 package org.example;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -15,7 +16,8 @@ import java.io.Serializable;
 
 
 @Entity //Esto se debe guardar en la bd
-@Table
+@Table(name = "Domicilio")
+@Audited
 public class Domicilio implements Serializable {
 
     @Id
@@ -23,7 +25,7 @@ public class Domicilio implements Serializable {
     private Long id;
 
     @Column(name = "nombre_calle")  //Se podrian omitir
-    private String nombre_calle;
+    private String nombrecalle;
 
     @Column(name = "número")
     private int numero;

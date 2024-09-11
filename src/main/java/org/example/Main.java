@@ -20,14 +20,14 @@ public class Main {
             entityManager.getTransaction().begin(); //Inicia la transaccion
 
             Domicilio domicilio1 = Domicilio.builder()
-                    .nombre_calle("San Juan")
+                    .nombrecalle("San Juan")
                     .numero(2030)
                     .build();
 
             Cliente cliente1 = Cliente.builder()
                     .nombre("Luciano")
                     .apellido("Oro")
-                    .dni(26373992)
+                    .dni(26373993)
                     .domicilio(domicilio1)
                     .build();
 
@@ -96,6 +96,9 @@ public class Main {
             det2.setFactura(factura1);
 
             factura1.setTotal(120);
+
+            //Factura factura1 = entityManager.find(Factura.class, 1L);
+            //factura1.setNumero(85);
 
 
             entityManager.persist(factura1);

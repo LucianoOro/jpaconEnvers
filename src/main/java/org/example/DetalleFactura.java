@@ -1,6 +1,7 @@
 package org.example;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -16,6 +17,7 @@ import java.io.Serializable;
 
 @Entity //Esto se debe guardar en la bd
 @Table
+@Audited
 public class DetalleFactura implements Serializable {
 
     @Id
